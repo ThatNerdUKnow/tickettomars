@@ -34,7 +34,7 @@ func RandomSpeed() int {
 }
 
 func RandomRoundTrip() bool {
-	return rand.Intn(1) == 1
+	return rand.Intn(2) == 1
 }
 
 func RandomSpaceLine() string {
@@ -74,6 +74,6 @@ func (s SpaceTrip) ToRow() table.Row {
 	}
 
 	// spaceline, days, trip type, price
-	r := table.Row{s.spaceline, fmt.Sprint(s.GetDuractionDays()), tripType, fmt.Sprint(s.Price())}
+	r := table.Row{s.spaceline, fmt.Sprint(s.GetDuractionDays()), tripType, "$" + fmt.Sprint(s.Price())}
 	return r
 }
