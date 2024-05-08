@@ -7,6 +7,7 @@ import (
 	"github.com/charmbracelet/bubbles/table"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
+	"github.com/common-nighthawk/go-figure"
 )
 
 var baseStyle = lipgloss.NewStyle().BorderStyle(lipgloss.NormalBorder()).BorderForeground(lipgloss.Color(240))
@@ -44,6 +45,9 @@ func (m model) View() string {
 }
 
 func main() {
+
+	figure := figure.NewFigure("Ticket to Mars!", "", true)
+	figure.Print()
 
 	columns := []table.Column{
 		{Title: "Spaceline", Width: 15},
