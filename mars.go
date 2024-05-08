@@ -39,7 +39,7 @@ func RandomRoundTrip() bool {
 
 func RandomSpaceLine() string {
 	var max = len(spaceLines)
-	i := rand.Intn(max - 1)
+	i := rand.Intn(max)
 	return spaceLines[i]
 }
 
